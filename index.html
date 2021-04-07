@@ -7,7 +7,18 @@
         <title>Is Costco Open Today?</title>
         <meta name="description" content="Learn if Costco is open today or not.">
         <link rel="stylesheet" href="main.css">
-    </head>
+        
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FCYD8R28WE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FCYD8R28WE');
+</script>
+        
+ 
 
 
 <script>
@@ -59,21 +70,14 @@ function date2Str(temp) {
 function padStr(i) {
     return (i < 10) ? "0" + i : "" + i;
 }
-    
-    
-                
-onloadfunc = function() 
-{
-    checkifholiday()
-}
+
 </script>
 
-    <body onload="onloadfunc()">
+</head>
         
+    <body onload="checkifholiday()">
         
         <h2>Is Costco Open Today?</h2>
-        
-        
         
         <h1><output name="gmax" id="gmax">OPEN</output></h1>
         
