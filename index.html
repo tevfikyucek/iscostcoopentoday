@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Is Costco Open Today?</title>
+        <meta name="description" content="Learn if Costco is open today or not.">
+        <link rel="stylesheet" href="main.css">
+    </head>
+
+
+<script>
+
+checkifholiday = function()
+{
+    var array = ["2021-01-01", // new year
+                 "2022-01-01", 
+                 "2023-01-01",
+                 "2021-04-04", // easter
+                 "2022-04-17",
+                 "2023-04-09", 
+                "2021-05-31-", // memorial
+                "2022-05-30-",
+                "2023-05-29-",
+                "2021-07-04", // independence day
+                "2022-07-04",
+                "2023-07-04",
+                "2021-09-06", // labor day
+                "2022-09-05",
+                "2023-09-04",
+                "2021-11-25", // thanksgiving
+                "2022-11-24",
+                "2023-11-23",
+                "2021-12-25", // christmas
+                "2022-12-25",
+                "2023-12-25" ];
+    var value1 = "26/12/2016";  //exists
+    //var value2 = "26/12/2016";  //doesn't exist
+
+    
+    function isInArray(array, value) {
+      return (array.find(item => {return item == value}) || []).length > 0;
+    }
+
+    const todayDate = new Date()    
+    if (isInArray(array, date2Str(todayDate))) {
+        document.getElementById('gmax').value = "CLOSED"
+    }
+}
+
+
+function date2Str(temp) {
+    return padStr(temp.getFullYear()) + '-' +
+                  padStr(1 + temp.getMonth()) + '-' +
+                  padStr(temp.getDate());
+}
+
+function padStr(i) {
+    return (i < 10) ? "0" + i : "" + i;
+}
+    
+    
+                
+onloadfunc = function() 
+{
+    checkifholiday()
+}
+</script>
+
+    <body onload="onloadfunc()">
+        
+        
+        <h2>Is Costco Open Today?</h2>
+        
+        
+        
+        <h1><output name="gmax" id="gmax">OPEN</output></h1>
+        
+        <h2>Links</h2>
+        <ul>
+            <li><a href="http://www.costco.com">Costco.com</a></li>
+            <li><a href="https://www.costco.com/warehouse-locations?langId=-1&storeId=10301&catalogId=10701">Search Warehouses </a>for business hours</li>
+        </ul>
+        
+        <h2>Notice of Non-Affiliation and Disclaimer</h2>
+        
+        <p>We are not affiliated, associated, authorized, endorsed by, or in any way officially connected with Costco Wholesale Corporation, or any of its subsidiaries or its affiliates. The official Costco Wholesale Corporation website can be found at https://www.costco.com/</p>
+        
+        <p>COSTCO, COSTCO WHOLESALE, COSTCO.COM and their respective designs and/or logos are either trademarks or registered trademarks of Costco.</p>
+
+    </body>
+</html>
+
